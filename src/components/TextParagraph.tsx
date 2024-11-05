@@ -7,8 +7,8 @@ interface TextParagraphProps {
 
 const TextParagraph: FC<TextParagraphProps> = ({ children, alignment }) => {
     return (
-        <div className={`text-${alignment} mb-14`}>
-            <p className={`text-2xl text-gray-600 max-w-xl ${alignment === 'right' ? 'ml-auto' : ''}`}>
+        <div className={`text-${alignment} `}>
+            <p className={`text-2xl text-gray-600 max-w-[600px] ${alignment === 'right' ? 'ml-auto' : ''}`}>
                 {children}
             </p>
         </div>
