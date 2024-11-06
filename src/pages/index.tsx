@@ -12,7 +12,7 @@ import TextParagraph from "../components/TextParagraph.tsx";
 //     {/*</div>*/}
 const IndexPage = () => {
     return (
-        <div className="h-dvh bg-white max-w-7xl mx-auto w-full flex flex-col gap-8 pt-16">
+        <div className="h-dvh bg-white max-w-7xl mx-auto w-full flex flex-col gap-8 pt-16 px-2 pb-2">
             <div className="mb-12">
                 <h1 className="text-7xl font-bold">
                     Luca Saur
