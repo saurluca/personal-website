@@ -13,7 +13,7 @@ import TextParagraph from "../components/TextParagraph.tsx";
 const IndexPage = () => {
     return (
         <div className="h-full w-full bg-special">
-            <div className="h-dvh bg-special max-w-7xl mx-auto w-full flex flex-col gap-8 pt-16 px-2 pb-2">
+            <div className="min-h-screen bg-special max-w-7xl mx-auto w-full flex flex-col gap-8 pt-14 px-2 pb-4">
                 <div className="mb-12">
                     <h1 className="text-7xl font-bold">
                         Luca Saur
@@ -51,7 +51,7 @@ const IndexPage = () => {
                        className="text-blue-600 hover:underline">Github</a> <br/>
                     I love to dive deep into a project<br/>
                     But at the same time, to explore many different paths.<br/>
-                    Skills: Javascript (React, Vue.js), Python (Django, ML), Java
+                    Skills: Javascript (React, Vue), Python (Django, ML), Java
                 </TextParagraph>
             </div>
 
