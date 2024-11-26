@@ -13,7 +13,7 @@ import TextParagraph from "../components/TextParagraph.tsx";
 const IndexPage = () => {
     return (
         <div className="h-full w-full bg-special">
-            <div className="min-h-screen bg-special max-w-7xl mx-auto w-full flex flex-col gap-8 pt-14 px-2 pb-4">
+            <div className="min-h-screen bg-special max-w-[1300px] mx-auto w-full flex flex-col gap-12 pt-14 px-2 pb-4">
                 <div className="mb-12">
                     <h1 className="text-7xl font-bold">
                         Luca Saur
@@ -26,35 +26,31 @@ const IndexPage = () => {
                 <TextParagraph alignment="right">
                     <a href="mailto:mail@lucasaur.com" className="text-blue-600 hover:underline" target="_blank"
                        rel="noopener noreferrer">mail@lucasaur.com</a><br/>
-                    I am a curious human being who takes live with a grain of salt. You can often find me coding, chilling, laughing or fighting
+                    I'm a curious human being who approaches live with a sense of humour. You can often find me coding, chilling, laughing or fighting
                     somebody on the mat.
                 </TextParagraph>
 
                 <TextParagraph alignment="left">
                     <a href="https://memetasks.com" target="_blank" rel="noopener noreferrer"
                        className="text-blue-600 hover:underline">Memetasks</a><br/>
-                    Is a passion project of mine. It's a minimalistic todo app, but with a twist. Checking of task rewards you with AI generated
-                    memes.
+                    A passion project — a minimalist to-do app with a twist: completing tasks rewards you with AI-generated memes
                 </TextParagraph>
 
                 <TextParagraph alignment="right">
                     <a href="https://databites.de" target="_blank" rel="noopener noreferrer"
                        className="text-blue-600 hover:underline">Databites</a> <br/>
-                    A german startup, I am working for as a Fullstack Developer. It brings data to the bakery world.<br/>
-                    I am also studying Cognitive Science<br/>
-                    at the University of Osnabrück.
+                    A german startup, I am working for as a Fullstack Developer.<br/>
+                    Also currently pursuing a B.Sc. in Cognitive Science at the University of Osnabrück, specializing in Artificial Intelligence.
                 </TextParagraph>
-
 
                 <TextParagraph alignment="left">
                     <a href="https://github.com/saurluca" target="_blank" rel="noopener noreferrer"
                        className="text-blue-600 hover:underline">Github</a> <br/>
-                    I love to dive deep into a project<br/>
-                    But at the same time, to explore many different paths.<br/>
-                    Skills: Javascript (React, Vue), Python (Django, ML), Java
+                    I enjoy immersing myself in new subjects<br/>while quickly acquiring the necessary skills.<br/>
+                    Skills: AI, JavaScript (React, Vue), Python (Django, ML), Java<br/>
+                    Tools: Git, GitHub Actions, Docker, Linux
                 </TextParagraph>
             </div>
-
         </div>
     )
 }
