@@ -10,6 +10,7 @@ import TextParagraph from "../components/TextParagraph.tsx";
 //     {/*        loading="eager"*/}
 //     {/*    />*/}
 //     {/*</div>*/}
+//     Hello
 const IndexPage = () => {
     return (
         <div className="h-full w-full bg-special">
