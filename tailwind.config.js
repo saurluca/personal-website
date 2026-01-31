@@ -7,8 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        'special': '#fefefe',
-      }
+        primary: {
+          DEFAULT: 'var(--color-primary)',
+          dark: 'var(--color-primary-dark)',
+        },
+        accent: 'var(--color-accent)',
+        text: {
+          DEFAULT: 'var(--color-text)',
+          secondary: 'var(--color-text-secondary)',
+        },
+        background: 'var(--color-background)',
+        border: 'var(--color-border)',
+        danger: 'var(--color-danger)',
+      },
     },
   },
   plugins: [],
