@@ -11,20 +11,23 @@ export const Projects = () => {
       tech: t('projects.its.tech'),
       githubUrl: 'https://github.com/saurluca/its',
       liveUrl: 'https://tutor.ethz.ch',
+      image: '/2.png',
     },
     {
       title: t('projects.coxi.title'),
       description: t('projects.coxi.description'),
       tech: t('projects.coxi.tech'),
       githubUrl: 'https://github.com/saurluca/coxi-credits',
-      liveUrl: undefined, // Add if available
+      liveUrl: 'https://coxi-credits.vercel.app/',
+      image: undefined,
     },
     {
       title: t('projects.finludo.title'),
       description: t('projects.finludo.description'),
       tech: t('projects.finludo.tech'),
       githubUrl: 'https://github.com/saurluca/finludo',
-      liveUrl: undefined, // Add if available
+      liveUrl: undefined,
+      image: undefined,
     },
   ];
 

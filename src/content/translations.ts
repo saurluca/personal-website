@@ -15,10 +15,25 @@ const translations = {
         },
         about: {
             title: 'About Me',
-            paragraph1: 'I am a software developer with a passion for creating solutions that combine technical excellence with business value. My journey began with a Cognitive Science degree focused on Artificial Intelligence, where I developed a strong foundation in both theoretical understanding and practical implementation of AI systems.',
-            paragraph2: 'During my internship at ETH Zurich, I independently developed an intelligent tutoring system that uses AI to generate and evaluate exercises. This project, which became my bachelor thesis, demonstrated how specialized models can compete with large language models like GPT-4o—results that surprised even me.',
-            paragraph3: 'For nearly two years, I worked as a full-stack developer at Databites, a German startup. As the second developer, I took on diverse responsibilities: building web applications, managing IT infrastructure and servers, developing AI solutions and chatbots, and even contributing to recruiting and onboarding. This experience taught me to handle projects from conception to deployment and maintenance.',
-            paragraph4: 'I bring both technical depth and entrepreneurial thinking to every project. Whether it\'s a complete web application, an AI-powered solution, or infrastructure setup, I work independently and deliver results that meet business needs.',
+            intro: 'Software developer combining AI expertise with full-stack development. I build practical solutions that deliver real business value.',
+            databites: {
+                title: 'Databites',
+                role: 'Full-Stack Developer',
+                date: 'Since 2024',
+                description: 'First developer at German startup supporting bakeries. Responsibilities include developing an AI chatbot for data queries, sales forecasting (PyTorch), and authentication system (Django), as well as Docker-based Linux server infrastructure with CI/CD pipelines.',
+            },
+            uni: {
+                title: 'University of Osnabrück',
+                role: 'B.Sc. Cognitive Science',
+                date: '2023 - 2025',
+                description: 'Studies focused on AI and machine learning.',
+            },
+            eth: {
+                title: 'ETH Zürich',
+                role: 'RISE Research Intern',
+                date: '2025',
+                description: 'Development of an intelligent tutoring system at Security, Privacy & Society Lab. Fine-tuning of LLM Apertus on Euler Cluster for automated grading.',
+            },
         },
         projects: {
             title: 'Projects',
@@ -75,21 +90,36 @@ const translations = {
         hero: {
             title: 'Luca Saur',
             subtitle: 'Softwareentwickler spezialisiert auf KI & Full-Stack-Entwicklung',
-            description: 'Ich entwickle moderne Webanwendungen und KI-Lösungen für Unternehmen. Mit Expertise von Frontend bis Backend, DevOps und Machine Learning liefere ich vollständige Lösungen, die echten Mehrwert schaffen.',
+            description: 'Ich entwickle moderne Webanwendungen und KI-Lösungen für Unternehmen. Mit Expertise von Frontend bis Backend, DevOps und Machine Learning liefere ich Lösungen, die echten Mehrwert schaffen.',
             cta: 'Gemeinsam arbeiten',
         },
         about: {
             title: 'Über mich',
-            paragraph1: 'Ich bin Softwareentwickler mit einer Leidenschaft für Lösungen, die technische Exzellenz mit Geschäftswert verbinden. Mein Weg begann mit einem Cognitive Science Studium mit Schwerpunkt auf Künstlicher Intelligenz, wo ich eine starke Basis in theoretischem Verständnis und praktischer Umsetzung von KI-Systemen entwickelte.',
-            paragraph2: 'Während meines Praktikums an der ETH Zürich entwickelte ich selbständig ein intelligentes Tutoring-System, das KI nutzt, um Übungsaufgaben zu erstellen und zu bewerten. Dieses Projekt, das zu meiner Bachelorarbeit wurde, zeigte, wie spezialisierte Modelle mit großen Sprachmodellen wie GPT-4o mithalten können—Ergebnisse, die selbst mich überraschten.',
-            paragraph3: 'Fast zwei Jahre lang arbeitete ich als Full-Stack-Entwickler bei Databites, einem deutschen Startup. Als zweiter Entwickler übernahm ich vielfältige Aufgaben: Webanwendungen entwickeln, IT-Infrastruktur und Server verwalten, KI-Lösungen und Chatbots entwickeln und sogar im Recruiting und Onboarding mitwirken. Diese Erfahrung lehrte mich, Projekte von der Konzeption bis zum Deployment und zur Wartung zu betreuen.',
-            paragraph4: 'Ich bringe sowohl technische Tiefe als auch unternehmerisches Denken in jedes Projekt ein. Ob es eine vollständige Webanwendung, eine KI-gestützte Lösung oder die Einrichtung von Infrastruktur ist—ich arbeite selbständig und liefere Ergebnisse, die Geschäftsanforderungen erfüllen.',
+            intro: 'Softwareentwickler mit KI-Expertise und Full-Stack-Erfahrung. Ich entwickle praktische Lösungen mit echtem Geschäftswert.',
+            databites: {
+                title: 'Databites',
+                role: 'Full-Stack Entwickler',
+                date: 'Seit 2024',
+                description: 'Erster Entwickler in deutschen Startup zur Unterstützung von Bäckereien. Aufgaben beinhalten Entwicklung eines KI-Chatbots für Datenabfragen, Umsatzprognosen (PyTorch) und Authentifizierungssystem (Django) sowie Docker-basierte Linux-Server-Infrastruktur mit CI/CD-Pipelines.',
+            },
+            uni: {
+                title: 'Universität Osnabrück',
+                role: 'B.Sc. Cognitive Science',
+                date: '2023 - 2025',
+                description: 'Studium mit Schwerpunkt auf KI und Maschinellem Lernen.',
+            },
+            eth: {
+                title: 'ETH Zürich',
+                role: 'RISE Research Praktikant',
+                date: '2025',
+                description: 'Entwicklung eines intelligenten Tutoring-Systems am Security, Privacy & Society Lab. Fine-Tuning von LLM Apertus auf Euler Cluster für automatisierte Bewertung.',
+            },
         },
         projects: {
             title: 'Projekte',
             its: {
                 title: 'Intelligentes Tutoring-System',
-                description: 'Ein datenschutzorientiertes intelligentes Tutoring-System, entwickelt an der ETH Zürich. Erstellt automatisch personalisierte Lernaufgaben aus Kursmaterialien mithilfe von KI, mit vollständiger Benutzerkontrolle über Daten.',
+                description: 'Ein datenschutzorientiertes intelligentes Tutoring-System, entwickelt an der ETH Zürich. Erstellt automatisch personalisierte Lernaufgaben aus Kursmaterialien mithilfe von KI, mit Benutzerkontrolle über Daten.',
                 tech: 'Python, FastAPI, Vue, Nuxt, PostgreSQL, Docker, DSPy, GPT-4',
                 github: 'Auf GitHub ansehen',
                 live: 'Live Demo',

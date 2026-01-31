@@ -1,37 +1,43 @@
 import { useLanguage } from '../hooks/useLanguage';
-import { PhotoPlaceholder } from './PhotoPlaceholder';
+import { ExperienceCard } from './ExperienceCard';
 
 export const About = () => {
   const { t } = useLanguage();
 
   return (
     <section id="about" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-text mb-12 text-center">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-text mb-6 text-center">
           {t('about.title')}
         </h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Photo Placeholder */}
-          <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-            <PhotoPlaceholder className="w-full max-w-sm aspect-[4/3]" />
-          </div>
+        {/* Intro */}
+        <p className="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-12">
+          {t('about.intro')}
+        </p>
 
-          {/* Text Content */}
-          <div className="space-y-6 order-1 lg:order-2">
-            <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-              {t('about.paragraph1')}
-            </p>
-            <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-              {t('about.paragraph2')}
-            </p>
-            <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-              {t('about.paragraph3')}
-            </p>
-            <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-              {t('about.paragraph4')}
-            </p>
-          </div>
+        {/* Experience Cards */}
+        <div className="space-y-6">
+          <ExperienceCard
+            organization={t('about.databites.title')}
+            role={t('about.databites.role')}
+            date={t('about.databites.date')}
+            description={t('about.databites.description')}
+          />
+          
+          <ExperienceCard
+            organization={t('about.uni.title')}
+            role={t('about.uni.role')}
+            date={t('about.uni.date')}
+            description={t('about.uni.description')}
+          />
+          
+          <ExperienceCard
+            organization={t('about.eth.title')}
+            role={t('about.eth.role')}
+            date={t('about.eth.date')}
+            description={t('about.eth.description')}
+          />
         </div>
       </div>
     </section>

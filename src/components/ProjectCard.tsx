@@ -7,14 +7,23 @@ interface ProjectCardProps {
   tech: string;
   githubUrl: string;
   liveUrl?: string;
+  image?: string;
 }
 
-export const ProjectCard = ({ title, description, tech, githubUrl, liveUrl }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, tech, githubUrl, liveUrl, image }: ProjectCardProps) => {
   return (
     <div className="bg-background border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      {/* Screenshot Placeholder */}
-      <div className="aspect-video bg-gray-100">
-        <PhotoPlaceholder className="w-full h-full rounded-none" />
+      {/* Screenshot */}
+      <div className="aspect-video bg-gray-100 overflow-hidden">
+        {image ? (
+          <img 
+            src={image} 
+            alt={`${title} screenshot`}
+            className="w-full h-full object-cover scale-100"
+          />
+        ) : (
+          <PhotoPlaceholder className="w-full h-full rounded-none" />
+        )}
       </div>
 
       {/* Content */}
