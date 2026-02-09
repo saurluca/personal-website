@@ -9,8 +9,8 @@ const translations = {
         },
         hero: {
             title: 'Luca Saur',
-            subtitle: 'Custom AI Solutions & Modern Websites for Your Business',
-            description: 'I help businesses grow with tailored AI solutions and professional websites. Whether you need intelligent automation, data analysis, or a modern web presence, I deliver solutions that work for you.',
+            subtitle: 'More Time for Your Core Business',
+            description: 'I automate your routine tasks through intelligent software with AI and create websites that work for you, so you have more time for what matters.',
             cta: "Let's Work Together",
         },
         about: {
@@ -98,8 +98,8 @@ const translations = {
         },
         hero: {
             title: 'Luca Saur',
-            subtitle: 'Maßgeschneiderte KI Lösungen für ihr Unternehmen & Moderne Websites',
-            description: 'Ich helfe Unternehmen beim Wachstum mit maßgeschneiderten KI-Lösungen und professionellen Websites. Ob intelligente Automatisierung, Datenanalyse oder eine moderne Webpräsenz – ich liefere Lösungen, die für Sie funktionieren.',
+            subtitle: 'Mehr Zeit für Ihr Kerngeschäft',
+            description: 'Ich automatisiere Ihre Routineaufgaben durch intelligente Software mit KI und erstelle Webseiten, die für Sie arbeiten, damit Sie mehr Zeit für das wesentliche haben',
             cta: 'Gemeinsam arbeiten',
         },
         about: {
