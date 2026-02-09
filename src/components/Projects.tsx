@@ -6,19 +6,10 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: t('projects.its.title'),
-      description: t('projects.its.description'),
-      tech: t('projects.its.tech'),
-      githubUrl: 'https://github.com/saurluca/its',
-      liveUrl: 'https://tutor.ethz.ch',
-      image: '/2.png',
-    },
-    {
       title: t('projects.databites.title'),
       description: t('projects.databites.description'),
       tech: t('projects.databites.tech'),
-      githubUrl: 'https://databites.de/',
-      liveUrl: 'https://databites.de/',
+      liveUrl: "https://databites.de/",
       image: '/databites.png',
     },
     {
@@ -26,19 +17,25 @@ export const Projects = () => {
       description: t('projects.certusai.description'),
       tech: t('projects.certusai.tech'),
       githubUrl: 'https://github.com/saurluca/CertusAI',
-      liveUrl: undefined,
       image: '/certus-ai.png',
+    },
+    {
+      title: t('projects.its.title'),
+      description: t('projects.its.description'),
+      tech: t('projects.its.tech'),
+      githubUrl: 'https://github.com/saurluca/its',
+      image: '/image2.png',
     },
   ];
 
   return (
     <section id="projects" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-text mb-12 text-center">
           {t('projects.title')}
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="space-y-14">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
