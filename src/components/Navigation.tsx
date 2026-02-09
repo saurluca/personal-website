@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLanguage } from '../hooks/useLanguage';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
-const sections = ['home', 'about', 'projects', 'skills', 'contact'] as const;
+const sections = ['home', 'skills', 'projects', 'about', 'contact'] as const;
 
 export const Navigation = () => {
   const { t } = useLanguage();
@@ -12,7 +12,7 @@ export const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Update active section based on scroll position
       const sectionElements = sections.map(id => {
         const element = document.getElementById(id);
@@ -26,7 +26,7 @@ export const Navigation = () => {
       const current = sectionElements.find(
         section => section.top <= 100 && section.bottom >= 100
       );
-      
+
       if (current) {
         setActiveSection(current.id);
       }
@@ -53,11 +53,10 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-background/95 backdrop-blur-sm shadow-sm border-b border-border'
           : 'bg-background/80 backdrop-blur-sm'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -75,11 +74,10 @@ export const Navigation = () => {
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className={`text-sm font-medium transition-colors ${
-                  activeSection === section
+                className={`text-sm font-medium transition-colors ${activeSection === section
                     ? 'text-primary'
                     : 'text-text-secondary hover:text-text'
-                }`}
+                  }`}
               >
                 {t(`nav.${section}`)}
               </button>
