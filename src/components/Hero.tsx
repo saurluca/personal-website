@@ -33,6 +33,7 @@ export const Hero = () => {
             </p>
             <button
               onClick={scrollToContact}
+              aria-label={t('hero.cta')}
               className="px-8 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary-dark transition-colors shadow-sm hover:shadow-md"
             >
               {t('hero.cta')}
@@ -43,7 +44,10 @@ export const Hero = () => {
           <div className="flex justify-center lg:justify-end">
             <img
               src="/me.jpeg"
-              alt="Luca"
+              alt="Luca Saur - AI Solutions & Web Development Expert"
+              loading="eager"
+              width="500"
+              height="625"
               className="w-full max-w-lg h-[500px] object-cover rounded-lg"
               style={{ aspectRatio: '4/5', width: '100%', height: '500px', objectFit: 'cover', objectPosition: 'center 35%' }}
             />

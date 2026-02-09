@@ -1,0 +1,26 @@
+{
+    "name": "Luca Saur - AI Solutions & Web Development",
+    "short_name": "Luca Saur",
+    "description": "Custom AI solutions and professional websites. Automate your routine tasks and get more time for your core business.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1e3a8a",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/me.jpeg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any"
+        }
+    ],
+    "lang": "en",
+    "dir": "ltr",
+    "orientation": "portrait-primary"
+}

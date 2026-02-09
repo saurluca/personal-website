@@ -15,10 +15,11 @@ export const ProjectCard = ({ title, description, tech, githubUrl, liveUrl, imag
     <div className="bg-background border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       {/* Screenshot */}
       <div className="aspect-[16/9] bg-gray-100 overflow-hidden">
-        {image ? (
+          {image ? (
           <img
             src={image}
-            alt={`${title} screenshot`}
+            alt={`${title} - ${description.substring(0, 60)}...`}
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         ) : (
