@@ -1,5 +1,4 @@
 import { useLanguage } from '../hooks/useLanguage';
-import { PhotoPlaceholder } from './PhotoPlaceholder';
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -40,9 +39,14 @@ export const Hero = () => {
             </button>
           </div>
 
-          {/* Photo Placeholder */}
+          {/* Photo */}
           <div className="flex justify-center lg:justify-end">
-            <PhotoPlaceholder className="w-full max-w-md aspect-square" />
+            <img
+              src="/me.jpeg"
+              alt="Luca"
+              className="w-full max-w-lg h-[500px] object-cover rounded-lg"
+              style={{ aspectRatio: '4/5', width: '100%', height: '500px', objectFit: 'cover', objectPosition: 'center 35%' }}
+            />
           </div>
         </div>
       </div>
