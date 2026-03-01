@@ -23,7 +23,7 @@ export const Contact = () => {
             {t('contact.cta')}
           </a>
           <a
-            href="https://www.cal.eu/lucasaur"
+            href="https://www.cal.com/lucasaur"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 bg-white border-2 border-primary text-primary font-medium rounded-md hover:bg-primary hover:text-white transition-colors shadow-sm hover:shadow-md flex items-center gap-2"
