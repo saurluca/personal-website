@@ -1,16 +1,19 @@
-import type { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
-import { siteUrl } from '@/lib/seo';
+import type { ReactNode } from 'react';
+import { Footer } from '@/components/Footer';
+import { Navigation } from '@/components/Navigation';
+import { personJsonLd, serviceJsonLd, siteUrl } from '@/lib/seo';
 import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Luca Saur - AI Solutions & Web Development | Automate Your Business',
+    default: 'Luca Saur – Websites für KMUs | Klar, mobil, in wenigen Wochen',
     template: '%s',
   },
   description:
-    'I automate your routine tasks through intelligent AI software and create professional websites. More time for your core business.',
+    'Websites für KMUs in Deutschland: klar, mobil und zu einem Festpreis. Kostenloses Erstgespräch buchen.',
   authors: [{ name: 'Luca Saur' }],
   robots: { index: true, follow: true },
   icons: {
@@ -32,5 +35,24 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  return children;
+  return (
+    <html lang="de">
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
+        <div className="min-h-screen bg-background">
+          <Navigation />
+          {children}
+          <Footer />
+        </div>
+        <Analytics />
+      </body>
+    </html>
+  );
 }

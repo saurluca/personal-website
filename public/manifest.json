@@ -1,7 +1,7 @@
 {
-    "name": "Luca Saur - AI Solutions & Web Development",
+    "name": "Luca Saur – Websites für KMUs",
     "short_name": "Luca Saur",
-    "description": "Custom AI solutions and professional websites. Automate your routine tasks and get more time for your core business.",
+    "description": "Websites für KMUs in Deutschland: klar, mobil und zu einem Festpreis.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
@@ -20,7 +20,7 @@
             "purpose": "any"
         }
     ],
-    "lang": "en",
+    "lang": "de",
     "dir": "ltr",
     "orientation": "portrait-primary"
 }

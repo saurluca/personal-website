@@ -2,24 +2,20 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { localizedPath, t, type Locale } from '@/lib/i18n';
-import { LanguageSwitcher } from './LanguageSwitcher';
+import { CAL_URL, copy } from '@/content/copy';
 
-export const Footer = ({ locale }: { locale: Locale }) => {
+export const Footer = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const homePath = localizedPath(locale, '/');
-  const impressumPath = localizedPath(locale, '/impressum');
-  const datenschutzPath = localizedPath(locale, '/datenschutz');
-  const isHome = pathname === '/' || pathname === '/de';
+  const isHome = pathname === '/';
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToProcess = () => {
     if (!isHome) {
-      router.push(homePath);
+      router.push('/#process');
       return;
     }
 
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById('process');
     if (element) {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
@@ -35,33 +31,36 @@ export const Footer = ({ locale }: { locale: Locale }) => {
     <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-text-secondary">{t(locale, 'footer.copyright')}</p>
+          <p className="text-sm text-text-secondary">{copy.footer.copyright}</p>
 
-          <div className="flex items-center gap-6">
-            <div className="hidden sm:flex items-center gap-4">
-              {['about', 'projects', 'skills', 'contact'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className="text-sm text-text-secondary hover:text-text transition-colors"
-                >
-                  {t(locale, `nav.${section}`)}
-                </button>
-              ))}
-            </div>
-            <Link
-              href={impressumPath}
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <button
+              type="button"
+              onClick={scrollToProcess}
               className="text-sm text-text-secondary hover:text-text transition-colors"
             >
-              {t(locale, 'footer.impressum')}
-            </Link>
-            <Link
-              href={datenschutzPath}
+              {copy.footer.process}
+            </button>
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-text-secondary hover:text-text transition-colors"
             >
-              {t(locale, 'footer.privacy')}
+              {copy.footer.book}
+            </a>
+            <Link
+              href="/impressum"
+              className="text-sm text-text-secondary hover:text-text transition-colors"
+            >
+              {copy.footer.impressum}
             </Link>
-            <LanguageSwitcher locale={locale} />
+            <Link
+              href="/datenschutz"
+              className="text-sm text-text-secondary hover:text-text transition-colors"
+            >
+              {copy.footer.privacy}
+            </Link>
           </div>
         </div>
       </div>

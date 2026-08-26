@@ -65,7 +65,7 @@ export const ProjectCard = ({ title, description, tech, githubUrl, liveUrl, imag
                   className="flex items-center gap-2 text-primary hover:text-primary-dark transition-colors text-sm font-medium"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Live
+                  Website
                 </a>
               )}
             </div>

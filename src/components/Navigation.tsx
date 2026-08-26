@@ -2,34 +2,32 @@
 
 import { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { localizedPath, t, type Locale } from '@/lib/i18n';
-import { LanguageSwitcher } from './LanguageSwitcher';
+import { copy, navItems } from '@/content/copy';
 
-const sections = ['home', 'skills', 'projects', 'about', 'contact'] as const;
-
-export const Navigation = ({ locale }: { locale: Locale }) => {
+export const Navigation = () => {
   const pathname = usePathname();
   const router = useRouter();
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
-  const homePath = localizedPath(locale, '/');
-  const isHome = pathname === '/' || pathname === '/de';
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      const sectionElements = sections.map(id => {
-        const element = document.getElementById(id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return { id, top: rect.top, bottom: rect.bottom };
-        }
-        return null;
-      }).filter(Boolean) as Array<{ id: string; top: number; bottom: number }>;
+      const sectionElements = navItems
+        .map((item) => {
+          const element = document.getElementById(item.id);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return { id: item.id, top: rect.top, bottom: rect.bottom };
+          }
+          return null;
+        })
+        .filter(Boolean) as Array<{ id: string; top: number; bottom: number }>;
 
       const current = sectionElements.find(
-        section => section.top <= 100 && section.bottom >= 100
+        (section) => section.top <= 100 && section.bottom >= 100
       );
 
       if (current) {
@@ -44,7 +42,7 @@ export const Navigation = ({ locale }: { locale: Locale }) => {
 
   const scrollToSection = (sectionId: string) => {
     if (!isHome) {
-      router.push(homePath);
+      router.push(sectionId === 'home' ? '/' : `/#${sectionId}`);
       return;
     }
 
@@ -66,23 +64,25 @@ export const Navigation = ({ locale }: { locale: Locale }) => {
       <a
         href="#home"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-md focus:shadow-lg"
-        onClick={(e) => {
-          e.preventDefault();
+        onClick={(event) => {
+          event.preventDefault();
           scrollToSection('home');
         }}
       >
-        Skip to main content
+        {copy.nav.skip}
       </a>
       <nav
-        aria-label="Main navigation"
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-background/95 backdrop-blur-sm shadow-sm border-b border-border'
-          : 'bg-background/80 backdrop-blur-sm'
-          }`}
+        aria-label="Hauptnavigation"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-background/95 backdrop-blur-sm shadow-sm border-b border-border'
+            : 'bg-background/80 backdrop-blur-sm'
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <button
+              type="button"
               onClick={() => scrollToSection('home')}
               className="text-xl font-bold text-text hover:text-primary transition-colors"
             >
@@ -90,21 +90,21 @@ export const Navigation = ({ locale }: { locale: Locale }) => {
             </button>
 
             <div className="hidden md:flex items-center space-x-8">
-              {sections.map((section) => (
+              {navItems.map((item) => (
                 <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`text-sm font-medium transition-colors ${activeSection === section
-                    ? 'text-primary'
-                    : 'text-text-secondary hover:text-text'
-                    }`}
+                  key={item.id}
+                  type="button"
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-sm font-medium transition-colors ${
+                    activeSection === item.id
+                      ? 'text-primary'
+                      : 'text-text-secondary hover:text-text'
+                  }`}
                 >
-                  {t(locale, `nav.${section}`)}
+                  {item.label}
                 </button>
               ))}
             </div>
-
-            <LanguageSwitcher locale={locale} />
           </div>
         </div>
       </nav>

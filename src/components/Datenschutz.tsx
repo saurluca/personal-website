@@ -1,22 +1,18 @@
 import Link from 'next/link';
-import { localizedPath, type Locale } from '@/lib/i18n';
+import { EMAIL } from '@/content/copy';
 
-const EMAIL = 'mail@lucasaur.com';
 const linkClass = 'text-primary hover:underline';
 
-export const Datenschutz = ({ locale }: { locale: Locale }) => {
-  const homePath = localizedPath(locale, '/');
-  const impressumPath = localizedPath(locale, '/impressum');
-
+export const Datenschutz = () => {
   return (
     <main className="pt-24 pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 bg-background">
       <article className="max-w-3xl mx-auto space-y-10 text-text-secondary">
         <header className="space-y-4">
           <Link
-            href={homePath}
+            href="/"
             className="text-sm text-text-secondary hover:text-primary transition-colors"
           >
-            ← {locale === 'de' ? 'Zurück zur Startseite' : 'Back to home'}
+            ← Zurück zur Startseite
           </Link>
           <h1 className="text-3xl sm:text-4xl font-bold text-text">
             Datenschutzerklärung
@@ -24,11 +20,6 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
           <p className="text-lg text-text-secondary">
             Informationen gemäß DSGVO und TDDDG
           </p>
-          {locale === 'en' ? (
-            <p className="text-sm text-text-secondary italic">
-              This privacy policy is provided in German.
-            </p>
-          ) : null}
         </header>
 
         <section className="space-y-3">
@@ -47,7 +38,7 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
           </p>
           <p>
             Weitere Pflichtangaben finden Sie im{' '}
-            <Link href={impressumPath} className={linkClass}>
+            <Link href="/impressum" className={linkClass}>
               Impressum
             </Link>
             .
@@ -70,15 +61,14 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
             <strong className="text-text">Diese Website</strong>
             <br />
             lucasaur.com ist die persönliche Website von Luca Saur. Sie stellt
-            berufliche Informationen sowie Angebote im Bereich KI-Lösungen und
-            Webentwicklung vor. Es gibt keine Registrierung und kein
+            berufliche Informationen sowie das Angebot vor, Websites für KMUs in
+            Deutschland zu erstellen. Es gibt keine Registrierung und kein
             Benutzerkonto.
           </p>
           <p>
             Beim Besuch der Website werden technische Zugriffsdaten und anonyme
             Nutzungsstatistiken über den Hosting-Anbieter Vercel verarbeitet
-            (siehe Abschnitt 3 und 4). Die gewählte Sprache wird ausschließlich
-            lokal in Ihrem Browser gespeichert.
+            (siehe Abschnitt 3 und 4).
           </p>
         </section>
 
@@ -113,7 +103,9 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
             <strong className="text-text">Auftragsverarbeitung:</strong> Mit
             Vercel besteht ein Vertrag über Auftragsverarbeitung (AVV). Die
             Datenübertragung in die USA erfolgt unter anderem auf Grundlage des{' '}
-            <strong className="text-text">EU-U.S. Data Privacy Framework (DPF)</strong>{' '}
+            <strong className="text-text">
+              EU-U.S. Data Privacy Framework (DPF)
+            </strong>{' '}
             gemäß Art. 45 DSGVO. Vercel Inc. ist unter dem DPF zertifiziert.
             Ergänzend können Standardvertragsklauseln der EU-Kommission (Art. 46
             Abs. 2 lit. c DSGVO) Anwendung finden.
@@ -143,22 +135,10 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
             nach § 25 Abs. 2 TDDDG nicht erforderlich.
           </p>
           <p>
-            <strong className="text-text">Lokale Speicherung (localStorage)</strong>
+            <strong className="text-text">Lokale Speicherung</strong>
             <br />
-            Ihr Browser speichert lokal die Sprachauswahl (Englisch oder
-            Deutsch), damit die Website beim nächsten Besuch in der gewählten
-            Sprache angezeigt werden kann. Diese Information wird nicht an uns
-            übermittelt.
-          </p>
-          <p>
-            <strong className="text-text">Rechtsgrundlage:</strong> Art. 6 Abs. 1
-            lit. f DSGVO (berechtigtes Interesse an einer funktionierenden
-            Spracheinstellung) sowie § 25 Abs. 2 TDDDG (technisch notwendige
-            Speicherung).
-          </p>
-          <p>
-            Sie können diese Daten jederzeit in den Browser-Einstellungen löschen
-            (Einstellungen → Cookies und Website-Daten / Local Storage).
+            Es wird keine Sprachauswahl oder vergleichbare Einstellung in Ihrem
+            Browser gespeichert.
           </p>
           <p>
             <strong className="text-text">Vercel Web Analytics</strong>
@@ -167,8 +147,8 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
             Analysedienst der Vercel Inc., 440 N Barranca Ave #4133, Covina, CA
             91723, USA. Der Dienst verwendet{' '}
             <strong className="text-text">keine Cookies</strong> und erstellt{' '}
-            <strong className="text-text">keine nutzerübergreifenden Profile</strong>.
-            Besucher werden anhand eines Hashes aus dem eingehenden Request
+            <strong className="text-text">keine nutzerübergreifenden Profile</strong>
+            . Besucher werden anhand eines Hashes aus dem eingehenden Request
             identifiziert; dieser Hash wird nicht dauerhaft gespeichert und nach
             spätestens <strong className="text-text">24 Stunden</strong>{' '}
             automatisch verworfen.
@@ -259,8 +239,8 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
             </li>
             <li>
               <strong className="text-text">Cal.com</strong> (Cal.com, Inc., USA)
-              – Terminbuchung. Der Button „Meeting buchen“ öffnet eine externe
-              Seite von Cal.com.{' '}
+              – Terminbuchung. Der Button „Kostenloses Gespräch buchen“ öffnet
+              eine externe Seite von Cal.com.{' '}
               <a
                 href="https://cal.com/privacy"
                 target="_blank"
@@ -313,13 +293,6 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
           <h2 className="text-xl font-semibold text-text">
             7. Ihre Rechte als betroffene Person
           </h2>
-          <p>
-            <strong className="text-text">Lokal gespeicherte Sprachauswahl:</strong>{' '}
-            Diese Daten liegen ausschließlich auf Ihrem Gerät. Ich habe keinen
-            Zugriff darauf und kann sie weder einsehen noch löschen. Sie
-            verwalten diese Daten selbst über Ihre Browser-Einstellungen (siehe
-            Abschnitt 4).
-          </p>
           <p>
             Hinsichtlich personenbezogener Daten, die im Zusammenhang mit dem
             Betrieb dieser Website verarbeitet werden, haben Sie jederzeit das
@@ -395,9 +368,6 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
           <h2 className="text-xl font-semibold text-text">9. Speicherdauer</h2>
           <ul className="list-disc space-y-1 pl-6">
             <li>
-              localStorage (Sprache): bis Sie die Daten in Ihrem Browser löschen
-            </li>
-            <li>
               Server-Log-Dateien (Vercel): nach den Richtlinien von Vercel, in
               der Regel nur für einen begrenzten Zeitraum
             </li>
@@ -418,9 +388,8 @@ export const Datenschutz = ({ locale }: { locale: Locale }) => {
           </h2>
           <p>
             Der Besuch dieser Website erfordert keine Registrierung und keine
-            Angabe personenbezogener Daten an mich. Ohne lokale Speicherung kann
-            die Sprachauswahl nicht dauerhaft gespeichert werden. Eine
-            Kontaktaufnahme per E-Mail ist freiwillig; ohne die dafür nötigen
+            Angabe personenbezogener Daten an mich. Eine Kontaktaufnahme per
+            E-Mail oder über Cal.com ist freiwillig; ohne die dafür nötigen
             Angaben kann ich Anfragen möglicherweise nicht beantworten.
           </p>
         </section>
