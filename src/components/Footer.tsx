@@ -1,10 +1,24 @@
-import { useLanguage } from '../hooks/useLanguage';
+'use client';
+
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { localizedPath, t, type Locale } from '@/lib/i18n';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
-export const Footer = () => {
-  const { t } = useLanguage();
+export const Footer = ({ locale }: { locale: Locale }) => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const homePath = localizedPath(locale, '/');
+  const impressumPath = localizedPath(locale, '/impressum');
+  const datenschutzPath = localizedPath(locale, '/datenschutz');
+  const isHome = pathname === '/' || pathname === '/de';
 
   const scrollToSection = (sectionId: string) => {
+    if (!isHome) {
+      router.push(homePath);
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80;
@@ -21,8 +35,8 @@ export const Footer = () => {
     <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-text-secondary">{t('footer.copyright')}</p>
-          
+          <p className="text-sm text-text-secondary">{t(locale, 'footer.copyright')}</p>
+
           <div className="flex items-center gap-6">
             <div className="hidden sm:flex items-center gap-4">
               {['about', 'projects', 'skills', 'contact'].map((section) => (
@@ -31,11 +45,23 @@ export const Footer = () => {
                   onClick={() => scrollToSection(section)}
                   className="text-sm text-text-secondary hover:text-text transition-colors"
                 >
-                  {t(`nav.${section}`)}
+                  {t(locale, `nav.${section}`)}
                 </button>
               ))}
             </div>
-            <LanguageSwitcher />
+            <Link
+              href={impressumPath}
+              className="text-sm text-text-secondary hover:text-text transition-colors"
+            >
+              {t(locale, 'footer.impressum')}
+            </Link>
+            <Link
+              href={datenschutzPath}
+              className="text-sm text-text-secondary hover:text-text transition-colors"
+            >
+              {t(locale, 'footer.privacy')}
+            </Link>
+            <LanguageSwitcher locale={locale} />
           </div>
         </div>
       </div>

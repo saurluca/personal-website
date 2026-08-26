@@ -86,6 +86,8 @@ const translations = {
         },
         footer: {
             copyright: '© 2026 Luca Saur. All rights reserved.',
+            impressum: 'Impressum',
+            privacy: 'Privacy Policy',
         },
     },
     de: {
@@ -175,6 +177,8 @@ const translations = {
         },
         footer: {
             copyright: '© 2026 Luca Saur. Alle Rechte vorbehalten.',
+            impressum: 'Impressum',
+            privacy: 'Datenschutzerklärung',
         },
     },
 };

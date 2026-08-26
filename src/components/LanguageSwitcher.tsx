@@ -1,23 +1,21 @@
-import { useLanguage } from '../hooks/useLanguage';
-import { useNavigate } from 'react-router-dom';
+'use client';
 
-export const LanguageSwitcher = () => {
-  const { language, setLanguage } = useLanguage();
-  const navigate = useNavigate();
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { localizedPath, stripLocale, type Locale } from '@/lib/locales';
 
-  const handleLanguageSwitch = () => {
-    const newLang = language === 'en' ? 'de' : 'en';
-    setLanguage(newLang);
-    navigate(newLang === 'en' ? '/' : '/de', { replace: true });
-  };
+export const LanguageSwitcher = ({ locale }: { locale: Locale }) => {
+  const pathname = usePathname();
+  const nextLocale: Locale = locale === 'en' ? 'de' : 'en';
+  const href = localizedPath(nextLocale, stripLocale(pathname));
 
   return (
-    <button
-      onClick={handleLanguageSwitch}
+    <Link
+      href={href}
       className="px-3 py-1.5 text-sm font-medium text-text-secondary hover:text-text transition-colors border border-border rounded-md hover:border-primary/30"
       aria-label="Switch language"
     >
-      {language === 'en' ? 'DE' : 'EN'}
-    </button>
+      {locale === 'en' ? 'DE' : 'EN'}
+    </Link>
   );
 };
