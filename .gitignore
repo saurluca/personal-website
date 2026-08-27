@@ -18,6 +18,7 @@ out
 .vscode/*
 !.vscode/extensions.json
 .idea
+.cursor/
 .DS_Store
 *.suo
 *.ntvs*
@@ -28,3 +29,4 @@ out
 assets/
 
 about.md
+LEGAL.md
