@@ -5,13 +5,13 @@ export const siteUrl = 'https://lucasaur.com';
 export type SeoPage = 'home' | 'impressum' | 'datenschutz';
 
 const titles: Record<SeoPage, string> = {
-  home: 'Luca Saur – Websites für KMUs | Klar, mobil, in wenigen Wochen',
+  home: 'Luca Saur – Websites für KMUs | Klar, schnell, in 4 Wochen',
   impressum: 'Impressum | Luca Saur',
   datenschutz: 'Datenschutzerklärung | Luca Saur',
 };
 
 const descriptions: Record<SeoPage, string> = {
-  home: 'Websites für KMUs in Deutschland: klar, mobil und zu einem Festpreis. Kostenloses Erstgespräch buchen.',
+  home: 'Websites für KMUs in Deutschland: klar, schnell und in 4 Wochen fertig. Kostenloser Entwurf in 7 Tagen.',
   impressum: 'Impressum und rechtliche Angaben gemäß § 5 DDG.',
   datenschutz:
     'Informationen zum Datenschutz gemäß DSGVO und TDDDG für die Website von Luca Saur.',
@@ -65,9 +65,9 @@ export const personJsonLd = {
   name: 'Luca Saur',
   url: siteUrl,
   image: `${siteUrl}/me.jpeg`,
-  jobTitle: 'Webentwickler',
+  jobTitle: 'CTO und Webentwickler',
   description:
-    'Ich baue Websites für KMUs in Deutschland: klar, mobil und zu einem Festpreis.',
+    'Ich baue Websites für KMUs in Deutschland: klar, schnell und in 4 Wochen fertig.',
   email: 'mail@lucasaur.com',
   sameAs: ['https://github.com/saurluca', 'https://linkedin.com/in/lucasaur'],
   knowsAbout: ['Webentwicklung', 'Webdesign', 'SEO'],
@@ -76,11 +76,18 @@ export const personJsonLd = {
     name: 'Universität Osnabrück',
     sameAs: 'https://www.uni-osnabrueck.de/',
   },
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Databites',
-    url: 'https://databites.de',
-  },
+  worksFor: [
+    {
+      '@type': 'Organization',
+      name: 'Prevery',
+      url: 'https://www.prevery.de/',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Databites',
+      url: 'https://databites.de',
+    },
+  ],
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Osnabrück',

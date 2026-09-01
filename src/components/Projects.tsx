@@ -6,26 +6,40 @@ export const Projects = () => {
 
   const items = [
     {
+      title: projects.prevery.title,
+      description: projects.prevery.description,
+      tech: projects.prevery.tech,
+      liveUrl: 'https://www.prevery.de/',
+      image: '/prevery.jpg',
+    },
+    {
+      title: projects.backhaus.title,
+      description: projects.backhaus.description,
+      tech: projects.backhaus.tech,
+      liveUrl: 'https://backhaus.vercel.app/',
+      image: '/backhaus.jpg',
+    },
+    {
       title: projects.databites.title,
       description: projects.databites.description,
       tech: projects.databites.tech,
       liveUrl: 'https://databites.de/',
       image: '/databites.png',
     },
-    {
-      title: projects.certusai.title,
-      description: projects.certusai.description,
-      tech: projects.certusai.tech,
-      githubUrl: 'https://github.com/saurluca/CertusAI',
-      image: '/certus-ai.png',
-    },
-    {
-      title: projects.its.title,
-      description: projects.its.description,
-      tech: projects.its.tech,
-      githubUrl: 'https://github.com/saurluca/its',
-      image: '/image2.png',
-    },
+    // {
+    //   title: projects.certusai.title,
+    //   description: projects.certusai.description,
+    //   tech: projects.certusai.tech,
+    //   githubUrl: 'https://github.com/saurluca/CertusAI',
+    //   image: '/certus-ai.png',
+    // },
+    // {
+    //   title: projects.its.title,
+    //   description: projects.its.description,
+    //   tech: projects.its.tech,
+    //   githubUrl: 'https://github.com/saurluca/its',
+    //   image: '/image2.png',
+    // },
   ];
 
   return (

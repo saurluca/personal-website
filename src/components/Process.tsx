@@ -1,3 +1,4 @@
+import { ArrowDown, ArrowRight } from 'lucide-react';
 import { copy } from '@/content/copy';
 
 export const Process = () => {
@@ -16,21 +17,33 @@ export const Process = () => {
           {process.intro}
         </p>
 
-        <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {process.steps.map((step) => (
+        <ol className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          {process.steps.map((step, index) => (
             <li
               key={step.number}
-              className="bg-background border border-border rounded-lg p-8 hover:shadow-lg transition-all"
+              className="relative bg-background border border-border rounded-lg p-6 hover:shadow-lg transition-all"
             >
               <p className="text-sm font-medium text-primary mb-2">
                 {step.number} · {step.duration}
               </p>
-              <h3 className="text-xl font-semibold text-text mb-4">
+              <h3 className="text-lg font-semibold text-text mb-3">
                 {step.title}
               </h3>
-              <p className="text-text-secondary leading-relaxed">
+              <p className="text-sm text-text-secondary leading-relaxed">
                 {step.description}
               </p>
+              {index < process.steps.length - 1 && (
+                <>
+                  <ArrowRight
+                    aria-hidden
+                    className="hidden lg:block absolute top-1/2 -right-6 -translate-y-1/2 w-5 h-6 text-primary"
+                  />
+                  <ArrowDown
+                    aria-hidden
+                    className="lg:hidden absolute -bottom-6 left-1/2 -translate-x-1/2 w-5 h-6 text-primary"
+                  />
+                </>
+              )}
             </li>
           ))}
         </ol>

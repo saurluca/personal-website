@@ -9,11 +9,11 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Luca Saur – Websites für KMUs | Klar, mobil, in wenigen Wochen',
+    default: 'Luca Saur – Websites für KMUs | Klar, schnell, in 4 Wochen',
     template: '%s',
   },
   description:
-    'Websites für KMUs in Deutschland: klar, mobil und zu einem Festpreis. Kostenloses Erstgespräch buchen.',
+    'Websites für KMUs in Deutschland: klar, schnell und in 4 Wochen fertig. Kostenloser Entwurf in 7 Tagen.',
   authors: [{ name: 'Luca Saur' }],
   robots: { index: true, follow: true },
   icons: {

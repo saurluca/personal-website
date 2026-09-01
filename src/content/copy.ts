@@ -5,8 +5,8 @@ export const CAL_URL =
 export const navItems = [
   { id: 'home', label: 'Start' },
   { id: 'offer', label: 'Leistung' },
-  { id: 'projects', label: 'Arbeit' },
   { id: 'process', label: 'Ablauf' },
+  { id: 'projects', label: 'Arbeit' },
   { id: 'contact', label: 'Kontakt' },
 ] as const;
 
@@ -17,10 +17,9 @@ export const copy = {
   hero: {
     title: 'Eine Website, die Anfragen bringt.',
     subtitle:
-      'Für KMUs in Deutschland: klar, mobil und in wenigen Wochen live.',
+      'Für KMUs in Deutschland: klar, schnell und in 4 Wochen fertig.',
     description:
-      'Ich baue Websites für lokale Betriebe – ohne unnötigen Ballast. Sie wissen, was Sie bekommen, zu einem Festpreis.',
-    name: 'Luca Saur, Osnabrück',
+      'In 7 Tagen stelle ich Ihnen kostenlos einen Entwurf bereit. Erst danach entscheiden Sie.',
     cta: 'Kostenloses Gespräch buchen',
     imageAlt: 'Luca Saur, Websites für KMUs',
   },
@@ -69,38 +68,58 @@ export const copy = {
     ],
   },
   projects: {
-    title: 'Technik und bisherige Arbeit',
+    title: 'Bisherige Arbeit',
     intro:
-      'Keine Kunden-Websites, sondern Arbeit, die zeigt, wie ich baue: live im Einsatz, im Team und in eigenen Projekten.',
+      'Arbeit, die zeigt, wie ich baue: eigenes Produkt, ein Beispiel für eine Bäckerei, Plattformarbeit im Team.',
+    prevery: {
+      title: 'Prevery',
+      description:
+        'Gesundheits-App, die ich als CTO und Geschäftsführer entwickelt habe. EVE hilft Menschen, selbstbestimmt gesünder zu leben.',
+      tech: 'App, Gesundheit, KI',
+    },
+    backhaus: {
+      title: 'Backhaus',
+      description:
+        'Beispielwebsite für eine Bäckerei: Sortiment, Öffnungszeiten, Kontakt. So tritt ein lokaler Betrieb klar auf.',
+      tech: 'Website, Bäckerei',
+    },
     databites: {
       title: 'Databites',
       description:
-        'Plattform für Bäckereien, an der ich mitbaue: Filialen, Planung, Kommunikation. Kein KMU-Kundenprojekt von mir, sondern laufende Produktarbeit im Team.',
+        'Komplett Lösung für Bäckereien, an der ich mitgebaut habe: Filialen, Planung, Kommunikation.',
       tech: 'Geschäftsplattform, Web, Daten',
     },
-    certusai: {
-      title: 'CertusAI',
-      description:
-        'Hackathon-Projekt: Assistent für Schweizer Recht. Gewinner von „Best Usage of Apertus“ bei den Swiss AI Weeks 2025. Zeigt, wie ich unter Zeitdruck etwas Nutzbares baue – kein Kundenauftrag.',
-      tech: 'Hackathon, Web, Legal Tech',
-    },
-    its: {
-      title: 'Intelligentes Tutoring-System',
-      description:
-        'Eigenes Lernprojekt: Aufgaben aus Kursmaterial, Feedback, Datenschutz im Blick. Kein Produkt für KMUs, sondern Hintergrund in Web und Software.',
-      tech: 'Webanwendung, Lernprojekt',
-    },
+    // certusai: {
+    //   title: 'CertusAI',
+    //   description:
+    //     'Hackathon-Projekt: Assistent für Schweizer Recht. Gewinner von „Best Usage of Apertus“ bei den Swiss AI Weeks 2025. Zeigt, wie ich unter Zeitdruck etwas Nutzbares baue – kein Kundenauftrag.',
+    //   tech: 'Hackathon, Web, Legal Tech',
+    // },
+    // its: {
+    //   title: 'Intelligentes Tutoring-System',
+    //   description:
+    //     'Eigenes Lernprojekt: Aufgaben aus Kursmaterial, Feedback, Datenschutz im Blick. Kein Produkt für KMUs, sondern Hintergrund in Web und Software.',
+    //   tech: 'Webanwendung, Lernprojekt',
+    // },
   },
   about: {
     title: 'Über mich',
     intro:
-      'Ich komme aus Osnabrück. Cognitive Science, Praxis bei Databites und ein Forschungsaufenthalt an der ETH – ich baue Websites, die sitzen, nicht die beeindrucken sollen.',
+      'Ich komme aus Osnabrück. CTO und Geschäftsführer von Prevery. Cognitive Science, Praxis bei Databites und ein Forschungsaufenthalt an der ETH – ich baue Websites, die sitzen, nicht die beeindrucken sollen.',
     chips: [
       'Osnabrück',
+      'CTO, Prevery',
       'B.Sc. Cognitive Science',
       'ETH Zürich',
-      'Seit 2024 bei Databites',
+      '2024-2026',
     ],
+    prevery: {
+      title: 'Prevery',
+      role: 'CTO und Geschäftsführer',
+      date: 'Aktuell',
+      description:
+        'Ich habe die Gesundheits-App EVE entwickelt: damit Menschen selbstbestimmt gesünder leben können.',
+    },
     databites: {
       title: 'Databites',
       role: 'Web- und Softwareentwicklung',
@@ -129,29 +148,36 @@ export const copy = {
     steps: [
       {
         number: '1',
-        title: 'Gespräch',
+        title: 'Erstgespräch',
         duration: '30 Min',
         description:
           'Wir schauen uns Ihr Angebot und Ihre heutige Website an. Sie gehen mit einem klaren nächsten Schritt raus – nicht mit einem Verkaufsgespräch.',
       },
       {
         number: '2',
-        title: 'Angebot',
-        duration: 'Festpreis',
+        title: 'Kostenloser Entwurf',
+        duration: '7 Tage',
         description:
-          'Sie bekommen ein transparentes Festpreis-Angebot. Offene Fragen klären wir live. Keine versteckten Kosten.',
+          'In 7 Tagen stelle ich Ihnen kostenlos einen Entwurf bereit. So sehen Sie, was Sie bekommen – unverbindlich, bevor Sie sich entscheiden.',
       },
       {
         number: '3',
-        title: 'Umsetzung',
-        duration: '1–4 Wochen',
+        title: 'Zweites Gespräch',
+        duration: 'Festpreis',
+        description:
+          'Sie bekommen ein transparentes Festpreis-Angebot. Offene Fragen klären wir live. Keine versteckten Kosten. Gemeinsam legen wir fest, wie es weitergeht.',
+      },
+      {
+        number: '4',
+        title: 'Weitere Umsetzung',
+        duration: 'Fixe Timeline',
         description:
           'Ich setze um, mit fixer Timeline. Zwischendurch sehen Sie den Stand und können gegensteuern.',
       },
       {
-        number: '4',
+        number: '5',
         title: 'Live',
-        duration: 'Danach',
+        duration: 'In 4 Wochen',
         description:
           'Ihre Website geht online. Sie wissen, wie Sie Inhalte anpassen und wie Sie mich bei Bedarf erreichen.',
       },
@@ -168,7 +194,7 @@ export const copy = {
       {
         question: 'Was kostet eine Website?',
         answer:
-          'Sie zahlen einen Festpreis, den Sie vor der Arbeit schriftlich bekommen. Die Höhe hängt vom Umfang ab – deshalb nenne ich online keine Pauschale. Im Gespräch klären wir, was Sie brauchen, und Sie entscheiden in Ruhe.',
+          'Sie zahlen einen Festpreis, den Sie vor der Arbeit schriftlich bekommen. Die Höhe hängt vom Umfang ab – deshalb nenne ich online keine Pauschale. Zuerst stelle ich Ihnen in 7 Tagen kostenlos einen Entwurf bereit. Im Gespräch klären wir, was Sie brauchen, und Sie entscheiden in Ruhe.',
       },
       {
         question: 'Wer liefert Texte und Fotos?',

@@ -30,6 +30,12 @@ export const About = () => {
 
         <div className="space-y-6">
           <ExperienceCard
+            organization={about.prevery.title}
+            role={about.prevery.role}
+            date={about.prevery.date}
+            description={about.prevery.description}
+          />
+          <ExperienceCard
             organization={about.databites.title}
             role={about.databites.role}
             date={about.databites.date}

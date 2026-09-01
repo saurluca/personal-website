@@ -12,21 +12,34 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ title, description, tech, githubUrl, liveUrl, image }: ProjectCardProps) => {
+  const media = image ? (
+    <Image
+      src={image}
+      alt={liveUrl ? `${title} – zur Website` : `${title} - ${description.substring(0, 60)}...`}
+      fill
+      sizes="(max-width: 1024px) 100vw, 1024px"
+      className={`object-cover${liveUrl ? ' hover:opacity-90 transition-opacity' : ''}`}
+    />
+  ) : (
+    <PhotoPlaceholder className="w-full h-full rounded-none" />
+  );
+
   return (
     <div className="bg-background border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden">
-        {image ? (
-          <Image
-            src={image}
-            alt={`${title} - ${description.substring(0, 60)}...`}
-            fill
-            sizes="(max-width: 1024px) 100vw, 1024px"
-            className="object-cover"
-          />
-        ) : (
-          <PhotoPlaceholder className="w-full h-full rounded-none" />
-        )}
-      </div>
+      {liveUrl ? (
+        <a
+          href={liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative aspect-[16/9] bg-gray-100 overflow-hidden block"
+        >
+          {media}
+        </a>
+      ) : (
+        <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden">
+          {media}
+        </div>
+      )}
 
       <div className="p-6 space-y-4">
         <h3 className="text-xl font-bold text-text">{title}</h3>

@@ -21,7 +21,6 @@ export const Hero = () => {
             <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-2xl">
               {hero.description}
             </p>
-            <p className="text-sm text-text-secondary">{hero.name}</p>
             <a
               href={CAL_URL}
               target="_blank"
@@ -36,10 +35,10 @@ export const Hero = () => {
             <Image
               src="/me.jpeg"
               alt={hero.imageAlt}
-              width={500}
-              height={625}
+              width={1024}
+              height={1024}
               priority
-              className="w-full max-w-lg h-[500px] object-cover rounded-lg object-[center_35%]"
+              className="w-full max-w-lg aspect-square object-cover rounded-lg object-center"
             />
           </div>
         </div>
