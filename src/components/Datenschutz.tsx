@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { EMAIL } from '@/content/copy';
+import { EMAIL, PHONE, PHONE_HREF } from '@/content/copy';
 
 const linkClass = 'text-primary hover:underline';
 
@@ -26,14 +26,19 @@ export const Datenschutz = () => {
           <h2 className="text-xl font-semibold text-text">1. Verantwortlicher</h2>
           <address className="not-italic whitespace-pre-line leading-relaxed">
             Luca Saur{'\n'}
-            Lange Straße 13{'\n'}
-            49080 Osnabrück{'\n'}
-            Deutschland
+            Rotkehlchenweg 12{'\n'}
+            70734 Fellbach
           </address>
           <p>
             E-Mail:{' '}
             <a href={`mailto:${EMAIL}`} className={linkClass}>
               {EMAIL}
+            </a>
+          </p>
+          <p>
+            Telefon:{' '}
+            <a href={PHONE_HREF} className={linkClass}>
+              {PHONE}
             </a>
           </p>
           <p>
@@ -331,22 +336,23 @@ export const Datenschutz = () => {
             </a>
             . Darüber hinaus haben Sie das Recht, sich bei einer
             Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO). Die für
-            Niedersachsen zuständige Behörde ist:
+            Baden-Württemberg zuständige Behörde ist:
           </p>
           <p>
-            Die Landesbeauftragte für den Datenschutz Niedersachsen
+            Der Landesbeauftragte für den Datenschutz und die
+            Informationsfreiheit Baden-Württemberg
             <br />
-            Prinzenstraße 5
+            Lautenschlagerstraße 20
             <br />
-            30159 Hannover
+            70173 Stuttgart
             <br />
             <a
-              href="https://lfd.niedersachsen.de"
+              href="https://www.baden-wuerttemberg.datenschutz.de"
               target="_blank"
               rel="noopener noreferrer"
               className={linkClass}
             >
-              lfd.niedersachsen.de
+              baden-wuerttemberg.datenschutz.de
             </a>
           </p>
         </section>

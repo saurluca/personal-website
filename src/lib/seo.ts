@@ -69,6 +69,7 @@ export const personJsonLd = {
   description:
     'Ich baue Websites für KMUs in Deutschland: klar, schnell und in 4 Wochen fertig.',
   email: 'mail@lucasaur.com',
+  telephone: '+4915221318257',
   sameAs: ['https://github.com/saurluca', 'https://linkedin.com/in/lucasaur'],
   knowsAbout: ['Webentwicklung', 'Webdesign', 'SEO'],
   alumniOf: {
@@ -90,7 +91,9 @@ export const personJsonLd = {
   ],
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Osnabrück',
+    streetAddress: 'Rotkehlchenweg 12',
+    postalCode: '70734',
+    addressLocality: 'Fellbach',
     addressCountry: 'DE',
   },
 };

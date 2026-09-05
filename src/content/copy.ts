@@ -1,4 +1,6 @@
 export const EMAIL = 'mail@lucasaur.com';
+export const PHONE = '015221318257';
+export const PHONE_HREF = 'tel:+4915221318257';
 export const CAL_URL =
   'https://cal.com/lucasaur/30min?overlayCalendar=true';
 

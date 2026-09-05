@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { EMAIL } from '@/content/copy';
+import { EMAIL, PHONE, PHONE_HREF } from '@/content/copy';
 
 const linkClass = 'text-primary hover:underline';
 
@@ -22,14 +22,23 @@ export const Impressum = () => {
           <h2 className="text-xl font-semibold text-text">Angaben gemäß § 5 DDG</h2>
           <address className="not-italic whitespace-pre-line leading-relaxed">
             Luca Saur{'\n'}
-            Lange Straße 13{'\n'}
-            49080 Osnabrück{'\n'}
-            Deutschland
+            Rotkehlchenweg 12{'\n'}
+            70734 Fellbach
           </address>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold text-text">Kontakt</h2>
           <p>
             E-Mail:{' '}
             <a href={`mailto:${EMAIL}`} className={linkClass}>
               {EMAIL}
+            </a>
+          </p>
+          <p>
+            Telefon:{' '}
+            <a href={PHONE_HREF} className={linkClass}>
+              {PHONE}
             </a>
           </p>
         </section>
@@ -38,9 +47,11 @@ export const Impressum = () => {
           <h2 className="text-xl font-semibold text-text">
             Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
           </h2>
-          <p className="whitespace-pre-line leading-relaxed">
-            Luca Saur{'\n'}Anschrift wie oben
-          </p>
+          <address className="not-italic whitespace-pre-line leading-relaxed">
+            Luca Saur{'\n'}
+            Rotkehlchenweg 12{'\n'}
+            70734 Fellbach
+          </address>
         </section>
 
         <section className="space-y-3">
