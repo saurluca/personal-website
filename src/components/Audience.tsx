@@ -1,4 +1,4 @@
-import { copy } from '@/content/copy';
+import { copy } from "@/content/copy";
 
 export const Audience = () => {
   const { audience } = copy;
@@ -31,8 +31,6 @@ export const Audience = () => {
             </div>
           ))}
         </div>
-
-        <p className="text-center text-text-secondary mt-10">{audience.note}</p>
       </div>
     </section>
   );
