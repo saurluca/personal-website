@@ -66,7 +66,7 @@ export const Datenschutz = () => {
             <strong className="text-text">Diese Website</strong>
             <br />
             lucasaur.com ist die persönliche Website von Luca Saur. Sie stellt
-            berufliche Informationen sowie das Angebot vor, Websites für KMUs in
+            berufliche Informationen sowie das Angebot vor, Websites für Handwerker in
             Deutschland zu erstellen. Es gibt keine Registrierung und kein
             Benutzerkonto.
           </p>

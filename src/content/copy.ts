@@ -9,6 +9,7 @@ export const navItems = [
   { id: 'offer', label: 'Leistung' },
   { id: 'process', label: 'Ablauf' },
   { id: 'projects', label: 'Arbeit' },
+  { id: 'faq', label: 'Fragen' },
   { id: 'contact', label: 'Kontakt' },
 ] as const;
 
@@ -19,17 +20,16 @@ export const copy = {
   hero: {
     title: 'Eine Website, die Anfragen bringt.',
     subtitle:
-      'Für KMUs in Deutschland: klar, schnell und in 4 Wochen fertig.',
+      'Für Handwerker in Deutschland: klar, schnell und in 4 Wochen fertig.',
     description:
       'In 7 Tagen stelle ich Ihnen kostenlos einen Entwurf bereit. Erst danach entscheiden Sie.',
     cta: 'Kostenloses Gespräch buchen',
-    imageAlt: 'Luca Saur, Websites für KMUs',
+    imageAlt: 'Luca Saur, Websites für Handwerker',
   },
   audience: {
     title: 'Für wen',
     intro:
       'Ob Handwerk, Beratung oder Praxis: Sie brauchen eine Website, die man versteht und über die man Sie erreicht.',
-    note: 'Auch für andere lokale Betriebe.',
     items: [
       {
         title: 'Handwerk',
@@ -100,7 +100,7 @@ export const copy = {
     // its: {
     //   title: 'Intelligentes Tutoring-System',
     //   description:
-    //     'Eigenes Lernprojekt: Aufgaben aus Kursmaterial, Feedback, Datenschutz im Blick. Kein Produkt für KMUs, sondern Hintergrund in Web und Software.',
+    //     'Eigenes Lernprojekt: Aufgaben aus Kursmaterial, Feedback, Datenschutz im Blick. Kein Produkt für Handwerker, sondern Hintergrund in Web und Software.',
     //   tech: 'Webanwendung, Lernprojekt',
     // },
   },
@@ -201,7 +201,7 @@ export const copy = {
       {
         question: 'Wer liefert Texte und Fotos?',
         answer:
-          'Am besten Sie: niemand kennt den Betrieb besser. Ich helfe beim Strukturieren und Formulieren. Fehlen Fotos, sagen wir das früh und finden eine einfache Lösung.',
+          'Ich erstelle einen Entwurf für alles: Texte und frei nutzbare Bilder aus dem Internet. Wenn Sie etwas ändern wollen, machen wir das gemeinsam. Eigene Fotos binde ich gerne ein.',
       },
       {
         question: 'Ist Suchmaschinenoptimierung dabei – und was passiert nach dem Launch?',
@@ -211,7 +211,7 @@ export const copy = {
       {
         question: 'Arbeiten Sie nur mit bestimmten Branchen?',
         answer:
-          'Nein. Handwerk, Dienstleistung und Praxis sind Beispiele. Wenn Sie einen lokalen Betrieb in Deutschland haben und eine klare Website brauchen, passt es in der Regel.',
+          'Nein. Handwerk, Dienstleistung und Praxis sind Beispiele. Wenn Sie eine klare Website brauchen für mehr Kunden und Internet Präsenz benötigen, bin ich ihr Mann.',
       },
     ],
   },

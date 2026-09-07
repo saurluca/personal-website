@@ -24,7 +24,7 @@ export const Projects = () => {
       description: projects.databites.description,
       tech: projects.databites.tech,
       liveUrl: 'https://databites.de/',
-      image: '/databites.png',
+      image: '/databites.jpg',
     },
     // {
     //   title: projects.certusai.title,

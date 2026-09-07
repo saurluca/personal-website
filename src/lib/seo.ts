@@ -5,13 +5,13 @@ export const siteUrl = 'https://lucasaur.com';
 export type SeoPage = 'home' | 'impressum' | 'datenschutz';
 
 const titles: Record<SeoPage, string> = {
-  home: 'Luca Saur – Websites für KMUs | Klar, schnell, in 4 Wochen',
+  home: 'Luca Saur – Websites für Handwerker | Klar, schnell, in 4 Wochen',
   impressum: 'Impressum | Luca Saur',
   datenschutz: 'Datenschutzerklärung | Luca Saur',
 };
 
 const descriptions: Record<SeoPage, string> = {
-  home: 'Websites für KMUs in Deutschland: klar, schnell und in 4 Wochen fertig. Kostenloser Entwurf in 7 Tagen.',
+  home: 'Websites für Handwerker in Deutschland: klar, schnell und in 4 Wochen fertig. Kostenloser Entwurf in 7 Tagen.',
   impressum: 'Impressum und rechtliche Angaben gemäß § 5 DDG.',
   datenschutz:
     'Informationen zum Datenschutz gemäß DSGVO und TDDDG für die Website von Luca Saur.',
@@ -67,7 +67,7 @@ export const personJsonLd = {
   image: `${siteUrl}/me.jpeg`,
   jobTitle: 'CTO und Webentwickler',
   description:
-    'Ich baue Websites für KMUs in Deutschland: klar, schnell und in 4 Wochen fertig.',
+    'Ich baue Websites für Handwerker in Deutschland: klar, schnell und in 4 Wochen fertig.',
   email: 'mail@lucasaur.com',
   telephone: '+4915221318257',
   sameAs: ['https://github.com/saurluca', 'https://linkedin.com/in/lucasaur'],
@@ -101,9 +101,9 @@ export const personJsonLd = {
 export const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Luca Saur – Websites für KMUs',
+  name: 'Luca Saur – Websites für Handwerker',
   description:
-    'Professionelle Websites für kleine und mittlere Unternehmen in Deutschland.',
+    'Professionelle Websites für Handwerker in Deutschland.',
   url: siteUrl,
   serviceType: ['Webentwicklung', 'Webdesign'],
   areaServed: {
